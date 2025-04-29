@@ -87,7 +87,7 @@ const baseDeck = [
   },
   {
     id: 13,
-    name: "Mattéo P.",
+    name: "Matteo P.",
     type: "UniMap+",
     image: "/matteop.jpg",
     style: "style4",
