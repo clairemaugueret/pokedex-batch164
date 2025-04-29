@@ -5,7 +5,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next.js App</title>
+        <title>Pokedex - Batch#164</title>
       </Head>
       <Component {...pageProps} />
     </>
