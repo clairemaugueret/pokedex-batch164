@@ -1,0 +1,92 @@
+.pokemon {
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  backdrop-filter: blur(15px);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*lumière haut*/
+.pokemon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: var(--glow-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: -1;
+  box-shadow: 0 0 5px var(--glow-color), 0 0 15px var(--glow-color),
+    0 0 30px var(--glow-color), 0 0 60px var(--glow-color);
+}
+
+.pokemon:hover::after {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.25;
+}
+
+/* lumière bas */
+.pokemon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: var(--glow-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  z-index: -1;
+  box-shadow: 0 0 5px var(--glow-color), 0 0 15px var(--glow-color),
+    0 0 30px var(--glow-color), 0 0 60px var(--glow-color);
+}
+
+.pokemon:hover::before {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.25;
+}
+
+/*reste*/
+.pokemon .imgContainer {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.pokemon .imgContainer img {
+  margin-top: 6px;
+  max-width: 90%;
+  border-radius: 50%;
+}
+
+.pokemon .info {
+  margin-top: 20px;
+}
+
+.pokemon .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+}
+
+.pokemon .type {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.8);
+}
